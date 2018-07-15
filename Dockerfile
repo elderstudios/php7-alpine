@@ -26,6 +26,6 @@ RUN apk --update --no-cache add wget \
   supervisor \
   && pecl install mcrypt-1.0.1 \
   && docker-php-ext-enable mcrypt \
-  && docker-php-ext-install mysqli mbstring pdo pdo_mysql tokenizer xml soap \
+  && docker-php-ext-install mysqli mbstring pdo pdo_mysql tokenizer xml soap sockets \
   && pecl clear-cache \
   && rm /var/cache/apk/*
